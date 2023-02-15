@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.home-content{
+    height: 709px;
+}
+
+.home-content h1{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;    
+}
+
+.content{
+    margin: auto 150px;
+}
+
+.content p{
+    font-family: 'Roboto Slab', serif; 
+}

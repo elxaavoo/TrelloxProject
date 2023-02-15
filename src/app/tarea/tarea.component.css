@@ -1,0 +1,49 @@
+.tarea{
+    padding: 7px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.tarea .tituloTarea{
+    display: inline-block;
+    text-align: center !important;
+    width: 100%;
+}
+
+.iconoTarea{
+    width: 30px;
+    margin: 0 !important;
+    display: inline-block;
+}
+
+.iconoTarea img{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+}
+
+.iconoTareaDerecha{
+    width: 30px;
+    margin: 0 !important;
+    float: right;
+    
+}
+
+.iconoTareaDerecha img{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+}
+
+.iconoTareaAbajo{
+    width: 30px;
+    margin: 0 !important;
+}
+
+.iconoTareaAbajo img {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    display: inline-block;
+}

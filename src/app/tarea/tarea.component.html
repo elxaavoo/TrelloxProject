@@ -1,0 +1,30 @@
+<div class="tarea" id="tarea_{{tarea.id}}">
+    <div class="iconoTarea">
+        <img (click)="removeTarea()" src="../../assets/trash.png" alt="eliminar">
+    </div>
+    <div class="iconoTarea">
+        <span *ngIf="tarea.prioridad == 'Moderado'"><img src="../../assets/moderado.png" alt="moderado"></span>
+        <span *ngIf="tarea.prioridad == 'Bajo'"><img src="../../assets/baja-prioridad.png" alt="bajo"></span>
+        <span *ngIf="tarea.prioridad == 'Urgente'"><img src="../../assets/urgente.png" alt="urgente"></span>
+    </div>
+    <div class="iconoTarea">
+        <span *ngIf="tarea.prioridad == 'Moderado'"><img src="../../assets/naranja.png" alt="moderado"></span>
+        <span *ngIf="tarea.prioridad == 'Bajo'"><img src="../../assets/verde.png" alt="bajo"></span>
+        <span *ngIf="tarea.prioridad == 'Urgente'"><img src="../../assets/rojo.png" alt="urgente"></span>
+    </div>
+    <div class="iconoTareaDerecha">
+        <img (click)="updatearTarea()" src="../../assets/update.png" alt="">
+    </div>
+    <h3 class="tituloTarea">Tarea</h3>
+    <p class="fechaTarea"><strong>Fecha de finalización:</strong> {{tarea.fecha}}</p>
+    <p class="tareaDescripcion">{{tarea.descripcion}} </p>
+    <p>
+        <span class="iconoTareaAbajo">
+            <img src="../../assets/uno.png" (click)="listarUnoTarea()" alt="uno">
+            <img src="../../assets/dos.png" (click)="listarDosTarea()" alt="dos">
+            <img src="../../assets/tres.png" (click)="listarTresTarea()" alt="tres">
+        </span>
+    </p>
+</div>
+
+

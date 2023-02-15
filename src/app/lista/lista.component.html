@@ -1,0 +1,14 @@
+<div class="lista" id="list_{{list.id}}">
+    <h1>{{list.name}}</h1>
+    <hr>
+    <div class="tareas">
+        <app-tarea class="col col-xs-3 col-sm-3 col-md-3" *ngFor="let tarea of list.tareas" [tarea]="tarea" (eliminar)="removeTarea($event)" 
+                                                                    (updatear)="updatearTarea($event)" 
+                                                                    (listarUno)="listarUnoTarea($event)"
+                                                                    (listarDos)="listarDosTarea($event)"
+                                                                    (listarTres)="listarTresTarea($event)">
+        </app-tarea>
+    </div>
+</div>
+
+

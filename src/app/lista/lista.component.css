@@ -1,0 +1,17 @@
+
+.lista{
+    margin: 10px;
+    background-color: lightgrey;
+    width:100%;
+    border-radius: 20px;
+    min-height: 690px;
+    padding: 20px;
+    vertical-align:top
+}
+
+.lista h1{
+    text-align: center;
+}
+
+
+

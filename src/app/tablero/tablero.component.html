@@ -1,0 +1,67 @@
+<main class="container-fluid home-content">
+    <div  class="row centrado " > 
+        <app-lista class="col-12 col-sm-4 col-md-4 col-lg-3" *ngFor="let lista of listas " [list]="lista" (eliminar)="removeTarea($event)" (updatear)="updatearTarea($event)" (listarUno)="listarUno($event)" (listarDos)="listarDos($event)" (listarTres)="listarTres($event)"></app-lista>
+        <div class="costado col-12 col-sm-4 col-md-4 col-lg-3">
+          <br><h1>Añadir Tarea</h1>
+        <button type="button" class="btn btn-primary trap" data-bs-toggle="modal" data-bs-target="#exampleModal">Añadir Tarea</button> <br>
+          <form>
+            <h1>Actualizar Tarea</h1>
+            <div class="form-row">
+              <div class="w-100 form-group col-3 col-sm-3 col-md-3">
+                <label for="prioridad">Prioridad</label>
+                <select id="prioridad" class="form-control" [(ngModel)]="updatePrioridad" [ngModelOptions]="{standalone: true}">
+                  <option selected>Urgente</option>
+                  <option>Moderado</option>
+                  <option>Bajo</option>
+                </select>
+              </div>
+              <div class="w-100 form-group col-12 col-sm-3 col-md-3">
+                <label for="inputEmail4">Fecha: </label>
+                <input type="date" class="form-control" id="date" placeholder="Fecha" [(ngModel)]="updateFecha" [ngModelOptions]="{standalone: true}">
+              </div>
+              <div class="w-100 form-group col-12 col-sm-3 col-md-3">
+                <label for="inputEmail4">Descripción: </label>
+                <input type="text" class="form-control" id="descripcion" placeholder="Descripción" [(ngModel)]="updateDescripcion" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div><br>
+            <button type="submit" class="btn btn-primary" (click)="modTarea()" data-dismiss="modal">Actualizar tarea</button>
+          </form>
+        </div>
+    <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Añadir Tarea</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="w-100 form-group col-md-4">
+                    <label for="prioridad">Prioridad</label>
+                    <select id="prioridad" class="form-control" [(ngModel)]="addPrioridad" [ngModelOptions]="{standalone: true}">
+                      <option selected>Urgente</option>
+                      <option>Moderado</option>
+                      <option>Bajo</option>
+                    </select>
+                  </div>
+                  <div class="w-100 form-group col-md-6">
+                    <label for="inputEmail4">Fecha: </label>
+                    <input type="date" class="form-control" id="date" placeholder="Fecha" [(ngModel)]="addFecha" [ngModelOptions]="{standalone: true}">
+                  </div>
+                  <div class="w-100 form-group col-md-6">
+                    <label for="inputEmail4">Descripción: </label>
+                    <input type="text" class="form-control" id="descripcion" placeholder="Descripción" [(ngModel)]="addDescripcion" [ngModelOptions]="{standalone: true}">
+                  </div>
+                </div><br>
+                <button type="submit" class="btn btn-primary" (click)="addTarea()" data-dismiss="modal">Añadir Tarea</button>
+              </form>
+            </div>
+            </div>
+          </div>
+      </div> 
+    </div>
+    </main>
+
+
